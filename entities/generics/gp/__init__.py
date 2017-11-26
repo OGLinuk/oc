@@ -11,8 +11,8 @@ class GenericParser(object):
 
     def __init__(self, prName):
         self.parserName = '{}p'.format(prName)
-        self.rawFilePath = '/data/raw/{}RawData.json'.format(prName)
-        self.parsedFilePath = '/data/parsed/{}ParsedData.txt'.format(prName)
+        self.rawFilePath = 'data/raw/{}RawData.json'.format(prName)
+        self.parsedFilePath = 'data/parsed/{}ParsedData.txt'.format(prName)
 
     # Loads and returns the raw data produced by the miner(s)
     @abc.abstractmethod

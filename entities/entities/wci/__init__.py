@@ -2,7 +2,7 @@
 Worldcoinindex.com miner
 
 https://www.worldcoinindex.com/apiservice
-    - https://www.worldcoinindex.com/apiservice/json?key=
+    - https://www.worldcoinindex.com/apiservice/json?key=%s
 '''
 
 import time
@@ -15,5 +15,5 @@ class wciMiner(APIMiner):
     '''Worldcoinindex.com Miner'''
 
     def exe_apiCall(self):
-        data = requests.get('{}'.format(self.minerAPIString, key))
+        data = requests.get('{}'.format(self.minerAPIString) % key)
         return data.json()

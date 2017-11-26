@@ -15,7 +15,7 @@ class APIMiner(GenericMiner):
         self.scheduledExeTime = self.set_executionTime()
         self.minerName = prName
         self.minerAPIString = prMinerAPIString
-        self.rawFilePath = '/data/raw/{}RawData.json'.format(self.minerName)
+        self.rawFilePath = 'data/raw/{}RawData.json'.format(self.minerName)
         self.parser = prParser
 
     def set_executionTime(self):
