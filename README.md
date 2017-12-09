@@ -28,3 +28,4 @@
 * Implement the ability to load pre-defined entities through csv file or another format
 * Include more open-source entities
 * Add API endpoint to the module to expose the mined/parsed data
+* Change the entities to accept ```*args``` && ```**kwargs```
