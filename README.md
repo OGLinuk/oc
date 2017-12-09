@@ -24,8 +24,19 @@
 
 <hr>
 
+# Creating a new entity
+1. Duplicate the temp directory - ../entities/temp
+2. Rename the directory to the abbreviation of the target (ie coinmarketcap -> cmc)
+3. In the ```__init__.py``` file change the name of the class to the abbreviation
+4. Rename the ```tempJSONp.py``` file and implement the parse() method
+    - Use the example entities (cmc, ccap, wci) when defining the parse() method
+5. Add the new entity to the factory pattern class in managers/InitM/fp.py
+
+<hr>
+
 # Milestones
 * Implement the ability to load pre-defined entities through csv file or another format
 * Include more open-source entities
 * Add API endpoint to the module to expose the mined/parsed data
 * Change the entities to accept ```*args``` && ```**kwargs```
+* Find way to update fp.py when a new entity is used/loaded from file
