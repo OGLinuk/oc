@@ -24,6 +24,10 @@
 
 <hr>
 
+# [Example](https://i.imgur.com/a28iMxa.gifv)
+
+<hr>
+
 # Creating a new entity
 1. Duplicate the temp directory - ../entities/temp
 2. Rename the directory to the abbreviation of the target (ie coinmarketcap -> cmc)
