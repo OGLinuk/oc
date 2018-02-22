@@ -31,7 +31,7 @@ class APIMiner(GenericMiner):
     def run(self):
         while True:
             # Can remove line 36, only there for debugging purposes
-            print('[{}miner] WAITING {} [{}miner]'.format(str.upper(self.minerName), time.time(), str.upper(self.minerName)))
+            #print('[{}miner] WAITING {} [{}miner]'.format(str.upper(self.minerName), time.time(), str.upper(self.minerName)))
             if time.time() >= self.scheduledExeTime:
                 with open(self.rawFilePath, 'a+') as f:
                     json.dump(self.exe_apiCall(), f)
@@ -46,4 +46,5 @@ class APIMiner(GenericMiner):
                 time.sleep(1)
                 os.remove(self.rawFilePath)
             if time.time() > self.scheduledExeTime:
-                break
+                self.scheduledExeTime = self.set_executionTime()
+                #break
